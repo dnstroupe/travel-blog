@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Travel Blog showcasing destinations around the world and space exploration with NASA API."
+    />
+    <title>Interactive Travel and Space Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
+    <header>
+      <nav class="bg-white dark:bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Travel & Space Blog</h1>
+          <ul class="flex space-x-4">
+            <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+            <li><a href="#blog" class="hover:text-blue-500">Blog</a></li>
+            <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+            <li><a href="#space" class="hover:text-blue-500">Space</a></li>
+            <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            <li>
+              <button
+                id="dark-mode-toggle"
+                class="bg-gray-200 dark:bg-gray-700 p-2 rounded"
+              >
+                Dark Mode
+              </button>
+            </li>
+            <li>
+              <button
+                id="music-toggle"
+                class="bg-gray-200 dark:bg-gray-700 p-2 rounded"
+              >
+                Start Music
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="home"
+      class="relative h-screen flex items-center justify-center"
+    >
+      <audio id="background-music" loop>
+        <source
+          src="assets/audio/seize-the-day-andrey-rossi-main-version-14571-01-40.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div
+        class="video-grid absolute inset-0 w-full h-full z-0 grid grid-cols-4 grid-rows-3 gap-2"
+      >
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/02/78/48/03/240_F_278480302_DYkbhcxcAErJLjpxhBaLjWvh81fsNDDR_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/04/35/27/32/240_F_435273253_9AFhwHCeTcl2TwAiajQYD82uxF9lvUsu_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/05/03/93/47/240_F_503934780_GwKYExOWLwLVYR402taIk4ZkEx0R2KbQ_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/03/41/03/87/240_F_341038795_MqPFsafUoZjW2UTNl71PH6qbzIs03hVF_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/02/03/97/14/240_F_203971430_N6caf1LkGpPfYnRc7twBPu0bJx6Eot92_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/04/80/62/07/240_F_480620703_fHvBArahOmyqd9jhLORpqbaaiqidw4ZV_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/04/68/96/28/240_F_468962803_wHkbmcVFm9v0J46A68KmNSwFZFD4GbiV_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/02/64/55/33/240_F_264553339_RGpBvgCn4hA4rqMb6M8w2W1Rr0PX6EXN_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/03/10/33/93/240_F_310339373_scYpU0bSMLbEpvXzx39hRJvg6LaIppvY_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/05/33/41/62/240_F_533416217_Gp9gIcwXMpW5h5iBJUSoo5MuI327AIUf_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/07/74/23/00/240_F_774230042_6ZjWe5TDdLujLhIgnaPX4P4MBam1o7B4_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <video class="w-full h-full object-cover" autoplay loop muted>
+          <source
+            src="https://v.ftcdn.net/02/22/41/77/240_F_222417788_tVAlZG116ksF1a5wRca0tWenzDOLFW0y_ST.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <div class="z-10 text-center text-white">
+        <h2 class="text-4xl font-bold">Explore the World</h2>
+        <p class="text-lg mt-4">
+          Discover new travel destinations and experiences
+        </p>
+      </div>
+    </section>
+
+    <section id="blog" class="py-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center">Latest Blog Posts</h2>
+        <div id="blog-posts" class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition duration-300"
+          >
+            <a href="https://www.peru.travel/en" target="_blank">
+              <img
+                src="assets/images/peru.jpg"
+                alt="Peru"
+                class="w-full h-40 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-xl font-semibold">
+                Exploring the Mountains of Peru
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Discover the breathtaking views and culture of the Andes.
+              </p>
+            </a>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition duration-300"
+          >
+            <a href="https://www.visitmorocco.com/en" target="_blank">
+              <img
+                src="assets/images/sahara.jpg"
+                alt="Sahara"
+                class="w-full h-40 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-xl font-semibold">
+                A Journey Through the Sahara Desert
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Experience the vast beauty and unique adventures of the desert.
+              </p>
+            </a>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition duration-300"
+          >
+            <a href="https://www.balitourismboard.id" target="_blank">
+              <img
+                src="assets/images/bali.jpg"
+                alt="Bali"
+                class="w-full h-40 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-xl font-semibold">
+                Discovering the Beaches of Bali
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Sun, sand, and serenity in one of the world's most beautiful
+                places.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-12 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center">Travel Gallery</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <img
+            src="assets/images/beachsunset.jpg"
+            alt="Beach Sunset"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <img
+            src="assets/images/mountainhike.jpg"
+            alt="Mountain Hike"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <img
+            src="assets/images/citylights.jpg"
+            alt="City Lights"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <img
+            src="assets/images/safariadventure.jpg"
+            alt="Safari Adventure"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <img
+            src="assets/images/desertdunes.jpg"
+            alt="Desert Dunes"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+          <img
+            src="assets/images/tropicalwaterfall.jpg"
+            alt="Tropical Waterfall"
+            class="w-full h-40 object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="space" class="py-12 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center">Explore the Cosmos</h2>
+        <div id="nasa-image" class="mt-8 text-center">
+          <p class="text-lg">Loading the latest NASA image of the day...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center">Get in Touch</h2>
+        <form id="contact-form" class="mt-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              class="p-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              class="p-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md"
+            />
+          </div>
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            class="p-4 mt-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md w-full"
+          ></textarea>
+          <button
+            type="submit"
+            class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="login" class="py-12 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center">Login</h2>
+        <form id="login-form" class="mt-8">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="p-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md"
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="p-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md mt-4"
+          />
+          <button
+            type="submit"
+            class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md"
+          >
+            Login
+          </button>
+        </form>
+        <p id="login-status" class="text-center mt-4"></p>
+      </div>
+    </section>
+
+    <script src="script.js"></script
